@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <title>TOUAM RENT | Alquiler de coches</title>
+
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap"
+    rel="stylesheet"
+  >
+
+
+  <style>
+
+    * {
+      box-sizing: border-box;
+    }
+
+
+    body {
+
+      margin: 0;
+
+      min-height: 100vh;
+
+      display: flex;
+
+      align-items: center;
+      justify-content: center;
+
+      padding: 24px;
+
+      font-family: "Montserrat", sans-serif;
+
+      color: white;
+
+      background:
+        radial-gradient(
+          circle at top right,
+          #16324c 0%,
+          #07111d 40%,
+          #03070c 100%
+        );
+    }
+
+
+    .card {
+
+      width: 100%;
+      max-width: 440px;
+
+      padding: 45px 28px 30px;
+
+      border-radius: 24px;
+
+      background:
+        rgba(255, 255, 255, 0.055);
+
+      border:
+        1px solid rgba(255, 255, 255, 0.12);
+
+      backdrop-filter: blur(15px);
+
+      box-shadow:
+        0 30px 70px rgba(0, 0, 0, 0.45);
+    }
+
+
+    .brand {
+
+      font-size: 13px;
+
+      letter-spacing: 5px;
+
+      font-weight: 600;
+
+      color: #b8c8d8;
+
+      margin-bottom: 30px;
+    }
+
+
+    .rent {
+
+      color: white;
+
+      font-weight: 700;
+    }
+
+
+    h1 {
+
+      font-size: 38px;
+
+      line-height: 1.05;
+
+      margin: 0 0 18px;
+
+      letter-spacing: -1.5px;
+    }
+
+
+    .subtitle {
+
+      color: #aab5c1;
+
+      font-size: 15px;
+
+      line-height: 1.6;
+
+      margin-bottom: 34px;
+    }
+
+
+    .button {
+
+      display: flex;
+
+      align-items: center;
+      justify-content: space-between;
+
+      width: 100%;
+
+      padding: 18px 20px;
+
+      margin-top: 12px;
+
+      border-radius: 12px;
+
+      text-decoration: none;
+
+      font-weight: 600;
+
+      font-size: 14px;
+
+      transition: 0.2s ease;
+    }
+
+
+    .button-primary {
+
+      background: white;
+
+      color: #07111d;
+    }
+
+
+    .button-primary:hover {
+
+      transform: translateY(-2px);
+
+      background: #eaf0f5;
+    }
+
+
+    .button-secondary {
+
+      color: white;
+
+      background:
+        rgba(255, 255, 255, 0.07);
+
+      border:
+        1px solid rgba(255, 255, 255, 0.18);
+    }
+
+
+    .button-secondary:hover {
+
+      background:
+        rgba(255, 255, 255, 0.12);
+
+      transform: translateY(-2px);
+    }
+
+
+    .arrow {
+
+      font-size: 19px;
+    }
+
+
+    .tag {
+
+      margin-top: 30px;
+
+      display: inline-block;
+
+      padding: 8px 11px;
+
+      border-radius: 50px;
+
+      background:
+        rgba(255, 255, 255, 0.08);
+
+      font-size: 10px;
+
+      letter-spacing: 1.5px;
+
+      text-transform: uppercase;
+
+      color: #b9c5cf;
+    }
+
+
+    @media (max-width: 500px) {
+
+      body {
+        padding: 16px;
+      }
+
+
+      .card {
+
+        padding:
+          38px 22px
+          26px;
+      }
+
+
+      h1 {
+
+        font-size: 34px;
+      }
+
+    }
+
+  </style>
+
+</head>
+
+
+<body>
+
+
+  <main class="card">
+
+
+    <div class="brand">
+
+      TOUAM
+      <span class="rent">
+        RENT
+      </span>
+
+    </div>
+
+
+    <h1>
+      Tu coche.<br>
+      Donde quieras.
+    </h1>
+
+
+    <p class="subtitle">
+
+      Alquiler de vehículos en Alicante.
+      Contacta con nuestro equipo o descubre nuestra flota.
+
+    </p>
+
+
+    <a
+      class="button button-primary"
+      href="https://wa.me/34695390104"
+      target="_blank"
+    >
+
+      <span>
+        Contactar por WhatsApp
+      </span>
+
+      <span class="arrow">
+        →
+      </span>
+
+    </a>
+
+
+    <a
+      class="button button-secondary"
+      href="https://touamgrupo.com/"
+      target="_blank"
+    >
+
+      <span>
+        Ver nuestros vehículos
+      </span>
+
+      <span class="arrow">
+        →
+      </span>
+
+    </a>
+
+
+    <div class="tag">
+
+      Alicante · Alquiler Premium
+
+    </div>
+
+
+  </main>
+
+
+</body>
+</html>
