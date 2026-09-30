@@ -1,319 +1,331 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-
   <meta charset="UTF-8">
-
-  <meta
-    name="viewport"
-    content="width=device-width, initial-scale=1.0"
-  >
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <title>TOUAM RENT | Alquiler de coches</title>
 
-
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-  <link
-    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap"
-    rel="stylesheet"
-  >
-
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
 
   <style>
-
     * {
       box-sizing: border-box;
     }
 
-
     body {
-
       margin: 0;
-
       min-height: 100vh;
-
       display: flex;
-
       align-items: center;
       justify-content: center;
-
       padding: 24px;
-
       font-family: "Montserrat", sans-serif;
-
       color: white;
 
       background:
-        radial-gradient(
-          circle at top right,
-          #16324c 0%,
-          #07111d 40%,
-          #03070c 100%
-        );
+        radial-gradient(circle at top right, #16324c 0%, #07111d 40%, #03070c 100%);
     }
-
 
     .card {
-
       width: 100%;
       max-width: 440px;
-
       padding: 45px 28px 30px;
-
       border-radius: 24px;
 
-      background:
-        rgba(255, 255, 255, 0.055);
-
-      border:
-        1px solid rgba(255, 255, 255, 0.12);
+      background: rgba(255, 255, 255, 0.055);
+      border: 1px solid rgba(255, 255, 255, 0.12);
 
       backdrop-filter: blur(15px);
-
-      box-shadow:
-        0 30px 70px rgba(0, 0, 0, 0.45);
+      box-shadow: 0 30px 70px rgba(0,0,0,0.45);
     }
 
-
     .brand {
-
       font-size: 13px;
-
       letter-spacing: 5px;
-
       font-weight: 600;
-
       color: #b8c8d8;
-
       margin-bottom: 30px;
     }
 
-
-    .rent {
-
+    .brand span {
       color: white;
-
       font-weight: 700;
     }
 
-
     h1 {
-
-      font-size: 38px;
-
-      line-height: 1.05;
-
-      margin: 0 0 18px;
-
+      font-size: 36px;
+      line-height: 1.08;
+      margin: 0 0 15px;
       letter-spacing: -1.5px;
     }
 
-
     .subtitle {
-
       color: #aab5c1;
-
-      font-size: 15px;
-
+      font-size: 14px;
       line-height: 1.6;
-
-      margin-bottom: 34px;
+      margin-bottom: 30px;
     }
 
-
     .button {
-
+      width: 100%;
       display: flex;
-
       align-items: center;
       justify-content: space-between;
 
-      width: 100%;
-
       padding: 18px 20px;
-
       margin-top: 12px;
 
       border-radius: 12px;
+      border: none;
 
-      text-decoration: none;
-
+      font-family: inherit;
+      font-size: 14px;
       font-weight: 600;
 
-      font-size: 14px;
+      cursor: pointer;
+      text-decoration: none;
 
       transition: 0.2s ease;
     }
 
-
-    .button-primary {
-
+    .primary {
       background: white;
-
       color: #07111d;
     }
 
-
-    .button-primary:hover {
-
-      transform: translateY(-2px);
-
-      background: #eaf0f5;
+    .secondary {
+      color: white;
+      background: rgba(255,255,255,0.07);
+      border: 1px solid rgba(255,255,255,0.18);
     }
 
+    .button:hover {
+      transform: translateY(-2px);
+    }
 
-    .button-secondary {
+    .form-section {
+      display: none;
+      margin-top: 25px;
+      padding-top: 25px;
+      border-top: 1px solid rgba(255,255,255,0.12);
+    }
 
+    .form-section.active {
+      display: block;
+    }
+
+    label {
+      display: block;
+      text-align: left;
+
+      font-size: 12px;
+      color: #b8c8d8;
+
+      margin-bottom: 7px;
+      margin-top: 15px;
+    }
+
+    input {
+      width: 100%;
+      padding: 15px;
+
+      border-radius: 10px;
+      border: 1px solid rgba(255,255,255,0.16);
+
+      background: rgba(255,255,255,0.08);
       color: white;
 
-      background:
-        rgba(255, 255, 255, 0.07);
+      font-family: inherit;
+      font-size: 15px;
 
-      border:
-        1px solid rgba(255, 255, 255, 0.18);
+      outline: none;
     }
 
-
-    .button-secondary:hover {
-
-      background:
-        rgba(255, 255, 255, 0.12);
-
-      transform: translateY(-2px);
+    input::-webkit-calendar-picker-indicator {
+      filter: invert(1);
+      cursor: pointer;
     }
 
-
-    .arrow {
-
-      font-size: 19px;
+    .small {
+      color: #8190a0;
+      font-size: 11px;
+      margin-top: 10px;
+      line-height: 1.5;
     }
 
+    .website {
+      display: block;
+      margin-top: 28px;
 
-    .tag {
+      text-align: center;
+      color: #9faeba;
 
-      margin-top: 30px;
-
-      display: inline-block;
-
-      padding: 8px 11px;
-
-      border-radius: 50px;
-
-      background:
-        rgba(255, 255, 255, 0.08);
-
-      font-size: 10px;
-
-      letter-spacing: 1.5px;
-
-      text-transform: uppercase;
-
-      color: #b9c5cf;
+      font-size: 12px;
+      text-decoration: none;
     }
 
+    .website:hover {
+      color: white;
+    }
 
     @media (max-width: 500px) {
-
       body {
-        padding: 16px;
+        padding: 15px;
       }
-
 
       .card {
-
-        padding:
-          38px 22px
-          26px;
+        padding: 38px 22px 26px;
       }
-
 
       h1 {
-
-        font-size: 34px;
+        font-size: 32px;
       }
-
     }
-
   </style>
-
 </head>
-
 
 <body>
 
-
   <main class="card">
 
-
     <div class="brand">
+      TOUAM <span>RENT</span>
+    </div>
 
-      TOUAM
-      <span class="rent">
-        RENT
-      </span>
+    <h1>¿Cómo podemos ayudarte?</h1>
+
+    <p class="subtitle">
+      Elige una opción y contacta directamente con nuestro equipo.
+    </p>
+
+    <button class="button primary" onclick="showRentalForm()">
+      <span>Quiero alquilar un coche</span>
+      <span>→</span>
+    </button>
+
+    <button class="button secondary" onclick="askInfo()">
+      <span>Quiero información</span>
+      <span>→</span>
+    </button>
+
+
+    <div id="rentalForm" class="form-section">
+
+      <label for="pickup">Fecha de recogida</label>
+      <input type="date" id="pickup">
+
+      <label for="return">Fecha de devolución</label>
+      <input type="date" id="return">
+
+      <button class="button primary" onclick="sendRentalMessage()">
+        <span>Continuar por WhatsApp</span>
+        <span>→</span>
+      </button>
+
+      <p class="small">
+        Las fechas sirven únicamente para preparar tu solicitud.
+        La reserva será confirmada posteriormente por nuestro equipo.
+      </p>
 
     </div>
 
 
-    <h1>
-      Tu coche.<br>
-      Donde quieras.
-    </h1>
-
-
-    <p class="subtitle">
-
-      Alquiler de vehículos en Alicante.
-      Contacta con nuestro equipo o descubre nuestra flota.
-
-    </p>
-
-
     <a
-      class="button button-primary"
-      href="https://wa.me/34695390104"
-      target="_blank"
-    >
-
-      <span>
-        Contactar por WhatsApp
-      </span>
-
-      <span class="arrow">
-        →
-      </span>
-
-    </a>
-
-
-    <a
-      class="button button-secondary"
+      class="website"
       href="https://touamgrupo.com/"
       target="_blank"
     >
-
-      <span>
-        Ver nuestros vehículos
-      </span>
-
-      <span class="arrow">
-        →
-      </span>
-
+      Ver nuestra flota en touamgrupo.com
     </a>
-
-
-    <div class="tag">
-
-      Alicante · Alquiler Premium
-
-    </div>
-
 
   </main>
 
+
+  <script>
+
+    const phone = "34695390104";
+
+    const pickupInput = document.getElementById("pickup");
+    const returnInput = document.getElementById("return");
+
+    const today = new Date();
+    const todayString = today.toISOString().split("T")[0];
+
+    pickupInput.min = todayString;
+    returnInput.min = todayString;
+
+
+    pickupInput.addEventListener("change", function() {
+
+      returnInput.min = pickupInput.value;
+
+      if (
+        returnInput.value &&
+        returnInput.value < pickupInput.value
+      ) {
+        returnInput.value = "";
+      }
+
+    });
+
+
+    function showRentalForm() {
+      document
+        .getElementById("rentalForm")
+        .classList
+        .add("active");
+    }
+
+
+    function sendRentalMessage() {
+
+      const pickup = pickupInput.value;
+      const returnDate = returnInput.value;
+
+      if (!pickup || !returnDate) {
+        alert("Por favor, selecciona las fechas de recogida y devolución.");
+        return;
+      }
+
+      const message =
+        `Hola, me gustaría solicitar información para alquilar un coche.\n\n` +
+        `Fecha de recogida: ${formatDate(pickup)}\n` +
+        `Fecha de devolución: ${formatDate(returnDate)}\n\n` +
+        `¿Podrían indicarme la disponibilidad y las opciones disponibles?`;
+
+      openWhatsApp(message);
+    }
+
+
+    function askInfo() {
+
+      const message =
+        "Hola, me gustaría solicitar información sobre el alquiler de vehículos.";
+
+      openWhatsApp(message);
+    }
+
+
+    function openWhatsApp(message) {
+
+      const url =
+        `https://wa.me/${phone}?text=${encodeURIComponent(message)}`;
+
+      window.open(url, "_blank");
+    }
+
+
+    function formatDate(dateString) {
+
+      const parts = dateString.split("-");
+
+      return `${parts[2]}/${parts[1]}/${parts[0]}`;
+    }
+
+  </script>
 
 </body>
 </html>
